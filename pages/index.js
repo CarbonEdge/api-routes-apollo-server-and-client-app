@@ -2,6 +2,7 @@ import gql from 'graphql-tag'
 import Link from 'next/link'
 import { useQuery } from '@apollo/client'
 import { initializeApollo } from '../apollo/client'
+import {Navbar} from '../components/ui/Navbar/Navbar'
 
 const ViewerQuery = gql`
   query ViewerQuery {
@@ -20,6 +21,7 @@ const Index = () => {
 
   return (
     <div>
+      <Navbar/>
       You're signed in as {viewer.name} and you're {viewer.status} goto{' '}
       <Link href="/about">
         <a>static</a>
