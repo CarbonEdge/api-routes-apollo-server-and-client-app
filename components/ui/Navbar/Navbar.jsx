@@ -3,6 +3,8 @@ import React, { useState, Component } from "react";
 import { MenuItems } from "./MenuItems";
 
 class Navbar extends Component {
+  state ={clicked:false}
+  
   render() {
     return (
       <nav className="NavbarItems">
