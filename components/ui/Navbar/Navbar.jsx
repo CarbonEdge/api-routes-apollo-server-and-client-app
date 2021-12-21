@@ -9,12 +9,10 @@ class Navbar extends Component {
     return (
       <nav className="NavbarItems">
         <h1 className="navbar-logo">Social Planets</h1>
-
-        <div className="menu-icon"></div>
-        <ul>
+        <ul className="nav-links">
           {MenuItems.map((item, index) => {
             return (
-              <li key={index}>
+              <li key={index} className="nav-linksli">
                 <Link href={`${item.url}`} key={index}>
                   <a className="{item.cName}">{item.title}</a>
                 </Link>
